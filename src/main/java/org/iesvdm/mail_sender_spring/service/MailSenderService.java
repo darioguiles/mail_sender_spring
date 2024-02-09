@@ -57,7 +57,7 @@ public class MailSenderService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
         helper.setFrom(from);
-        helper.setTo(to);
+        helper.setTo(to); //Error?
         helper.setSubject(subject);
         helper.setText(text, true);
         helper.addAttachment(attachName, inputStream);
@@ -68,8 +68,8 @@ public class MailSenderService {
     @Async
     public void notificarPorEmail(Usuario usuario) {
 
-//Correo en modo texto
-//            emailService.send(emailSender,
+//envio Correo en modo texto msj simple y básico
+//            this.send(emailSender,
 //                usuario.getEmail(),
 //                usuario.getNombre(),
 //                "Descripción:\n"

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Usuario {
 
+    //Validación de mensaje
     private String nombre;
     private String email;
 
